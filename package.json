@@ -1,0 +1,31 @@
+{
+  "name": "milight-web",
+  "version": "1.0.0",
+  "description": "web-based lights controller",
+  "main": "index.js",
+  "dependencies": {
+    "blinkstick": "^1.1.3",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "hsv-rgb": "^1.0.0",
+    "node-milight-promise": "^0.3.1",
+    "node-storage": "0.0.7",
+    "request": "^2.83.0",
+    "string-format": "^0.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leafuk/milight-web.git"
+  },
+  "author": "Lea Foreman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leafuk/milight-web/issues"
+  },
+  "homepage": "https://github.com/leafuk/milight-web#readme"
+}

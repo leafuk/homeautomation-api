@@ -1,0 +1,132 @@
+{
+    "endpoints": [
+        {
+            "endpointId": "everything",
+            "friendlyName": "Everything",
+            "description": "Everything Group",
+            "manufacturerName": "Lea Foreman",
+            "displayCategories": [
+                "SWITCH"
+            ],
+            "cookie": {
+                "ip": "192.168.1.31",
+                "port": "9999"
+            },
+            "capabilities": [
+                {
+                    "type": "AlexaInterface",
+                    "interface": "Alexa.PowerController",
+                    "version": "3",
+                    "properties": {
+                        
+                    }
+                }
+            ]
+        },
+        {
+            "endpointId": "heater",
+            "friendlyName": "Heater",
+            "description": "Dyson Hot",
+            "manufacturerName": "Dyson",
+            "displayCategories": [
+                "SWITCH"
+            ],
+            "cookie": {
+                "harmonyIP": "192.168.1.24",
+                "harmonyId": "38802541"
+            },
+            "capabilities": [
+                {
+                    "type": "AlexaInterface",
+                    "interface": "Alexa.PowerController",
+                    "version": "3",
+                    "properties": {
+                        
+                    }
+                }
+            ]
+        },
+        {
+            "endpointId": "milights",
+            "friendlyName": "Main Lights",
+            "description": "Lights Group",
+            "manufacturerName": "Lea Foreman",
+            "displayCategories": [
+                "LIGHT"
+            ],
+            "cookie": {
+                "ip": "192.168.1.23"
+            },
+            "capabilities": [
+                {
+                    "type": "AlexaInterface",
+                    "interface": "Alexa.PowerController",
+                    "version": "3",
+                    "properties": {
+                        "proactivelyReported": false,
+                        "retrievable": true
+                    }
+                },
+                {
+                    "type": "AlexaInterface",
+                    "interface": "Alexa.BrightnessController",
+                    "version": "3",
+                    "properties": {
+                        "supported": [
+                        {
+                            "name": "brightness"
+                        }
+                        ],
+                        "proactivelyReported": false,
+                        "retrievable": true
+                    }
+                },
+                {
+                    "type": "AlexaInterface",
+                    "interface": "Alexa.ColorController",
+                    "version": "3",
+                    "properties": {
+                      "supported": [
+                        {
+                          "name": "color"
+                        }
+                      ],
+                      "proactivelyReported": false,
+                      "retrievable": true
+                    }
+                }
+            ]
+        },
+        {
+            "endpointId": "ikea-led",
+            "friendlyName": "LED",
+            "description": "IKEA LEDs",
+            "manufacturerName": "Lea Foreman",
+            "displayCategories": [
+                "LIGHT"
+            ],
+            "capabilities": [
+                {
+                    "type": "AlexaInterface",
+                    "interface": "Alexa.PowerController",
+                    "version": "3",
+                    "properties": {
+                        
+                    }
+                },
+                {
+                    "type": "AlexaInterface",
+                    "interface": "Alexa.ColorController",
+                    "version": "3",
+                    "properties": {
+                      "supported": [
+                        {
+                          "name": "color"
+                        }
+                      ]
+                    }
+                }
+            ]
+        }
+    ]
+}
