@@ -1,3 +1,10 @@
+<a name="1.0.4"></a>
+## <small>1.0.4 (2018-02-19)</small>
+
+* Update to Travis config ([adfe551](https://github.com/leafuk/milight-web/commit/adfe551))
+
+
+
 <a name="1.0.3"></a>
 ## <small>1.0.3 (2018-02-19)</small>
 
