@@ -1,3 +1,10 @@
+<a name="1.0.2"></a>
+## <small>1.0.2 (2018-02-19)</small>
+
+* Add Bumped config. Include Docker build/push commands in Travis build config ([7952644](https://github.com/leafuk/milight-web/commit/7952644))
+
+
+
 <a name="1.0.1"></a>
 ## <small>1.0.1 (2018-02-19)</small>
 
