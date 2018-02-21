@@ -1,11 +1,6 @@
 FROM arm32v7/node:6-slim as build
-ENTRYPOINT ["/bin/bash"]
 
-RUN apt-get update && \  
-    apt-get -qy install \
-                build-essential \
-                libudev-dev \
-                python
+RUN apt-get update && apt-get -qy install build-essential libudev-dev python
 # WORKDIR /root/  
 
 RUN mkdir /app
