@@ -1,8 +1,6 @@
-FROM resin/raspberrypi3-node:6-slim as build
+FROM leaforeman/node-6-slim:latest as build
 
 RUN [ "cross-build-start" ]
-
-RUN apt-get update && apt-get -qy install build-essential libudev-dev python
 
 RUN mkdir /app
 WORKDIR /app
@@ -16,8 +14,7 @@ RUN npm install
 
 RUN [ "cross-build-end" ]
 
-
-FROM resin/raspberrypi3-node:6-slim
+FROM leaforeman/node-6-slim:latest
 
 RUN [ "cross-build-start" ]
 
