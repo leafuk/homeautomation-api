@@ -1,3 +1,10 @@
+<a name="1.0.19"></a>
+## <small>1.0.19 (2018-02-21)</small>
+
+* Reverted Dockerfil_rpi to multi-stage build ([4abf61f](https://github.com/leafuk/milight-web/commit/4abf61f))
+
+
+
 <a name="1.0.18"></a>
 ## <small>1.0.18 (2018-02-21)</small>
 
