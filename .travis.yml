@@ -7,12 +7,16 @@ services:
   - docker
 
 addons:
+  apt:
+    packages:
+      - docker-ce
   # code_climate:
+
 repo_token: fe82943c27af89401a9f63dcf5cb98ba3fe9672d2528534110279fc9e2c25ac5
+
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y build-essential libudev-dev
-  
 
 after_success:
   - if [ "$TRAVIS_TAG" != "" ]; then
