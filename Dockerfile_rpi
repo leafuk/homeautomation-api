@@ -1,4 +1,4 @@
-FROM resin/raspberry-pi-alpine-node:6-slim as build
+FROM resin/raspberrypi3-node:6-slim as build
 
 RUN [ "cross-build-start" ]
 
@@ -17,7 +17,7 @@ RUN npm install
 RUN [ "cross-build-end" ]
 
 
-FROM resin/raspberry-pi-alpine-node:6-slim
+FROM resin/raspberrypi3-node:6-slim
 
 RUN [ "cross-build-start" ]
 
