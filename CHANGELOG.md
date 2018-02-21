@@ -1,3 +1,10 @@
+<a name="1.0.18"></a>
+## <small>1.0.18 (2018-02-21)</small>
+
+* Add package.json to Dockerfile ([f799651](https://github.com/leafuk/milight-web/commit/f799651))
+
+
+
 <a name="1.0.17"></a>
 ## <small>1.0.17 (2018-02-21)</small>
 
