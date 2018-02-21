@@ -1,3 +1,10 @@
+<a name="1.0.21"></a>
+## <small>1.0.21 (2018-02-21)</small>
+
+* Update Travis config to use job stages ([8c3488a](https://github.com/leafuk/milight-web/commit/8c3488a))
+
+
+
 <a name="1.0.20"></a>
 ## <small>1.0.20 (2018-02-21)</small>
 
