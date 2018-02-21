@@ -2,7 +2,7 @@
   "name": "milight-web",
   "description": "web-based lights controller",
   "homepage": "https://github.com/leafuk/milight-web#readme",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "index.js",
   "author": {
     "name": "Lea Foreman"
