@@ -20,7 +20,10 @@ before_install:
 
 after_success:
   - if [ "$TRAVIS_TAG" != "" ]; then
-    docker build -f Dockerfile_rpi -t leaforeman/homeautomation_api:$TRAVIS_TAG . ;
+    docker build -f Dockerfile_rpi -t homeautomation_api .;
+    docker images;
+    docker tag homeautomation_api leaforeman/homeautomation_api:$TRAVIS_TAG;
+    docker tag homeautomation_api leaforeman/homeautomation_api:latest;
     docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
     docker push leaforeman/homeautomation_api:$TRAVIS_TAG;
     fi
