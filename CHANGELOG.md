@@ -1,3 +1,10 @@
+<a name="1.0.20"></a>
+## <small>1.0.20 (2018-02-21)</small>
+
+* Set base image to Debian-based ([d4654f8](https://github.com/leafuk/milight-web/commit/d4654f8))
+
+
+
 <a name="1.0.19"></a>
 ## <small>1.0.19 (2018-02-21)</small>
 
