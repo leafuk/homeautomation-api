@@ -1,3 +1,10 @@
+<a name="1.0.22"></a>
+## <small>1.0.22 (2018-02-21)</small>
+
+* Set base image in Dockerfile_rpi to custom node slim ([8febf3c](https://github.com/leafuk/milight-web/commit/8febf3c))
+
+
+
 <a name="1.0.21"></a>
 ## <small>1.0.21 (2018-02-21)</small>
 
