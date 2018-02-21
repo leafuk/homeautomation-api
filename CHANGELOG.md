@@ -1,3 +1,10 @@
+<a name="1.0.10"></a>
+## <small>1.0.10 (2018-02-21)</small>
+
+* Chnaged base image in Dockerfile_rpi ([75a5b65](https://github.com/leafuk/milight-web/commit/75a5b65))
+
+
+
 <a name="1.0.9"></a>
 ## <small>1.0.9 (2018-02-21)</small>
 
