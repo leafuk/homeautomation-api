@@ -1,29 +1,44 @@
-sudo: required
-language: node_js
-node_js:
-  - "6.10.0"
+sudo: true
+dist: trusty
 
-services:
-  - docker
+jobs:
+  include:
+    - stage: build docker image
+      if: tag IS present
+      script:
+      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+      - docker build -f Dockerfile_rpi -t $DOCKER_USERNAME/homeautomation_api .;
+      - docker tag $DOCKER_USERNAME/homeautomation_api $DOCKER_USERNAME/homeautomation_api:$TRAVIS_TAG;
+      - docker images
+      - docker push $DOCKER_USERNAME/homeautomation_api:$TRAVIS_TAG;
+      - docker push $DOCKER_USERNAME/homeautomation_api:latest;
 
-addons:
-  apt:
-    packages:
-      - docker-ce
-  # code_climate:
+# sudo: required
+# language: node_js
+# node_js:
+#   - "6.10.0"
 
-repo_token: fe82943c27af89401a9f63dcf5cb98ba3fe9672d2528534110279fc9e2c25ac5
+# services:
+#   - docker
 
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y build-essential libudev-dev
+# addons:
+#   apt:
+#     packages:
+#       - docker-ce
+#   # code_climate:
 
-after_success:
-  - if [ "$TRAVIS_TAG" != "" ]; then
-    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-    docker build -f Dockerfile_rpi -t $DOCKER_USERNAME/homeautomation_api .;
-    docker tag $DOCKER_USERNAME/homeautomation_api $DOCKER_USERNAME/homeautomation_api:$TRAVIS_TAG;
-    docker images;
-    docker push $DOCKER_USERNAME/homeautomation_api:$TRAVIS_TAG;
-    docker push $DOCKER_USERNAME/homeautomation_api:latest;
-    fi
+# repo_token: fe82943c27af89401a9f63dcf5cb98ba3fe9672d2528534110279fc9e2c25ac5
+
+# before_install:
+#   - sudo apt-get -qq update
+#   - sudo apt-get install -y build-essential libudev-dev
+
+# after_success:
+#   - if [ "$TRAVIS_TAG" != "" ]; then
+#     docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+#     docker build -f Dockerfile_rpi -t $DOCKER_USERNAME/homeautomation_api .;
+#     docker tag $DOCKER_USERNAME/homeautomation_api $DOCKER_USERNAME/homeautomation_api:$TRAVIS_TAG;
+#     docker images;
+#     docker push $DOCKER_USERNAME/homeautomation_api:$TRAVIS_TAG;
+#     docker push $DOCKER_USERNAME/homeautomation_api:latest;
+#     fi
