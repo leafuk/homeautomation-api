@@ -1,3 +1,10 @@
+<a name="1.0.16"></a>
+## <small>1.0.16 (2018-02-21)</small>
+
+* Add docker tag steps to Travis config ([9eeef19](https://github.com/leafuk/milight-web/commit/9eeef19))
+
+
+
 <a name="1.0.15"></a>
 ## <small>1.0.15 (2018-02-21)</small>
 
