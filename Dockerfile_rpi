@@ -1,6 +1,8 @@
-FROM resin/raspberry-pi-alpine-node:6-slim
+FROM resin/raspberry-pi-alpine-node:6-slim as build
 
 RUN [ "cross-build-start" ]
+
+RUN apt-get update && apt-get -qy install build-essential libudev-dev python
 
 RUN mkdir /app
 WORKDIR /app
@@ -8,9 +10,22 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 ADD ./package.json /app
-ADD ./node_modules /app/node_modules
-ADD ./src /app
+
 ADD ./bin/arm/HarmonyHubControl /app/HarmonyHubControl
+RUN npm install
+
+RUN [ "cross-build-end" ]
+
+
+FROM resin/raspberry-pi-alpine-node:6-slim
+
+RUN [ "cross-build-start" ]
+
+RUN mkdir /app
+WORKDIR /app
+
+COPY --from=build /app /app
+ADD ./src /app
 
 RUN chmod +x ./HarmonyHubControl && chmod +x ./modules/hs100.sh
 
