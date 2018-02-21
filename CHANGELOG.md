@@ -1,3 +1,10 @@
+<a name="1.0.9"></a>
+## <small>1.0.9 (2018-02-21)</small>
+
+* Simplified Dockerfile_rpi ([b3ab4b7](https://github.com/leafuk/milight-web/commit/b3ab4b7))
+
+
+
 <a name="1.0.8"></a>
 ## <small>1.0.8 (2018-02-21)</small>
 
