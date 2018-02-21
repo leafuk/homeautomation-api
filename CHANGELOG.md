@@ -1,3 +1,10 @@
+<a name="1.0.11"></a>
+## <small>1.0.11 (2018-02-21)</small>
+
+* Added cross-build blocks in Dockerfile_rpi ([11d2af3](https://github.com/leafuk/milight-web/commit/11d2af3))
+
+
+
 <a name="1.0.10"></a>
 ## <small>1.0.10 (2018-02-21)</small>
 
