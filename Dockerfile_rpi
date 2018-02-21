@@ -1,5 +1,7 @@
 FROM resin/raspberry-pi-alpine-node:6-slim
 
+RUN [ "cross-build-start" ]
+
 RUN mkdir /app
 WORKDIR /app
 
@@ -10,6 +12,8 @@ ADD ./src /app
 ADD ./bin/arm/HarmonyHubControl /app/HarmonyHubControl
 
 RUN chmod +x ./HarmonyHubControl && chmod +x ./modules/hs100.sh
+
+RUN [ "cross-build-end" ]
 
 EXPOSE 3000
 
