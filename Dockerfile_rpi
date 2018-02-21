@@ -1,5 +1,5 @@
 FROM arm32v7/node:6-slim as build
-ENTRYPOINT []
+ENTRYPOINT ["/bin/bash"]
 
 RUN apt-get update && \  
     apt-get -qy install \
