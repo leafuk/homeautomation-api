@@ -1,3 +1,10 @@
+<a name="1.0.23"></a>
+## <small>1.0.23 (2018-02-22)</small>
+
+* Add path for outputting version ([e2bf992](https://github.com/leafuk/homeautomation-api/commit/e2bf992))
+
+
+
 <a name="1.0.22"></a>
 ## <small>1.0.22 (2018-02-21)</small>
 
