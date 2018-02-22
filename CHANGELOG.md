@@ -1,3 +1,10 @@
+<a name="1.0.24"></a>
+## <small>1.0.24 (2018-02-22)</small>
+
+* Add netcat to base image ([e78c747](https://github.com/leafuk/homeautomation-api/commit/e78c747))
+
+
+
 <a name="1.0.23"></a>
 ## <small>1.0.23 (2018-02-22)</small>
 
