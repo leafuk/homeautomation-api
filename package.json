@@ -1,18 +1,18 @@
 {
-  "name": "milight-web",
-  "description": "web-based lights controller",
-  "homepage": "https://github.com/leafuk/milight-web#readme",
+  "name": "homeautomation-api",
+  "description": "Node-based API for handling Alexa Smart Home requests.",
+  "homepage": "https://github.com/leafuk/homeautomation-api#readme",
   "version": "1.0.22",
-  "main": "index.js",
+  "main": "src/app.js",
   "author": {
     "name": "Lea Foreman"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leafuk/milight-web.git"
+    "url": "git+https://github.com/leafuk/homeautomation-api.git"
   },
   "bugs": {
-    "url": "https://github.com/leafuk/milight-web/issues"
+    "url": "https://github.com/leafuk/homeautomation-api/issues"
   },
   "dependencies": {
     "blinkstick": "^1.1.3",

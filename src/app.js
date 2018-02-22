@@ -33,6 +33,13 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
+app.get('/version', function(req, res){
+  var pkgInfo = require(__dirname + '/package.json');
+
+  res.setHeader('Content-Type', 'application/json');
+  res.json({version: pkgInfo.version});
+})
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
