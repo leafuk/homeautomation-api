@@ -1,3 +1,10 @@
+<a name="1.0.27"></a>
+## <small>1.0.27 (2018-02-23)</small>
+
+* Update to Dockerfile_osx to make use of yarn ([0e0ca93](https://github.com/leafuk/homeautomation-api/commit/0e0ca93))
+
+
+
 <a name="1.0.26"></a>
 ## <small>1.0.26 (2018-02-23)</small>
 
