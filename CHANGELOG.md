@@ -1,3 +1,10 @@
+<a name="1.0.26"></a>
+## <small>1.0.26 (2018-02-23)</small>
+
+* Include build deps in base Dockerfile ([f9e7a5b](https://github.com/leafuk/homeautomation-api/commit/f9e7a5b))
+
+
+
 <a name="1.0.25"></a>
 ## <small>1.0.25 (2018-02-23)</small>
 
