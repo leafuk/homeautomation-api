@@ -1,7 +1,6 @@
-FROM node:6.10-alpine
+FROM node:6-slim
 
-RUN apk update && \  
-    apk add libudev-dev
+RUN apt-get update && apt-get -qy install build-essential libudev-dev python netcat
 
 RUN mkdir /app
 WORKDIR /app
@@ -9,7 +8,8 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 ADD package.json /app
-RUN npm install
+ADD yarn.lock /app
+RUN yarn install
 
 # ADD ./local-serve.js /app
 # ADD ./app.js /app

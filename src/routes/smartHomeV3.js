@@ -7,10 +7,20 @@ var milight = require('../modules/milight-controller.js');
 var harmony = require('../modules/harmony-controller.js');
 var tplink = require('../modules/hs100-controller');
 
-var blinkstick = require('blinkstick');
-var led = blinkstick.findFirst();
-if(led != undefined) {
-    led.setMode(1);
+try {
+  var blinkstick = require('blinkstick');
+  var led = blinkstick.findFirst();
+  if(led != undefined) {
+      led.setMode(1);
+  }
+} catch (error) {
+  var led = {
+    turnOff: function() {
+    },
+
+    setColor: function(color) {
+    }
+  };
 }
 
 var router = express.Router();

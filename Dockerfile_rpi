@@ -8,9 +8,13 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 ADD ./package.json /app
+ADD ./yarn.lock /app
 
 ADD ./bin/arm/HarmonyHubControl /app/HarmonyHubControl
-RUN npm install
+
+RUN export PATH=/usr/local:$PATH
+
+RUN yarn install
 
 RUN [ "cross-build-end" ]
 
@@ -30,4 +34,4 @@ RUN [ "cross-build-end" ]
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+CMD [ "node", "app.js" ]
