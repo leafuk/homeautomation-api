@@ -1,3 +1,10 @@
+<a name="1.0.25"></a>
+## <small>1.0.25 (2018-02-23)</small>
+
+* Update to Dockerfiles to include yarn ([a90d94c](https://github.com/leafuk/homeautomation-api/commit/a90d94c))
+
+
+
 <a name="1.0.24"></a>
 ## <small>1.0.24 (2018-02-22)</small>
 
