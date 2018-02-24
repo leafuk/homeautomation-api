@@ -1,3 +1,10 @@
+<a name="1.0.28"></a>
+## <small>1.0.28 (2018-02-24)</small>
+
+* Cache the Amazon profile so we don't query multiple times with the same token ([acadd0b](https://github.com/leafuk/homeautomation-api/commit/acadd0b))
+
+
+
 <a name="1.0.27"></a>
 ## <small>1.0.27 (2018-02-23)</small>
 
