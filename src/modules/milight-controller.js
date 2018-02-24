@@ -25,7 +25,7 @@ exports.on = function(zone) {
   zone = zone || _zone;
 
   store.put('milight.on', true);
-  store.put('color', [0, 0, 1]);
+  store.put('milight.color', [0, 0, 1]);
 
   light.sendCommands(commands.rgbw.on(zone), commands.rgbw.whiteMode(zone), commands.rgbw.brightness(100));
 }
