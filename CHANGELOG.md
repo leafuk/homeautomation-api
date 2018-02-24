@@ -1,3 +1,10 @@
+<a name="1.0.41"></a>
+## <small>1.0.41 (2018-02-24)</small>
+
+* Fix state report switch ([dbdfb2e](https://github.com/leafuk/homeautomation-api/commit/dbdfb2e))
+
+
+
 <a name="1.0.40"></a>
 ## <small>1.0.40 (2018-02-24)</small>
 
