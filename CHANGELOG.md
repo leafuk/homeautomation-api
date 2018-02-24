@@ -1,3 +1,10 @@
+<a name="1.0.49"></a>
+## <small>1.0.49 (2018-02-24)</small>
+
+* Retrieve milights color properly ([5fac2d0](https://github.com/leafuk/homeautomation-api/commit/5fac2d0))
+
+
+
 <a name="1.0.48"></a>
 ## <small>1.0.48 (2018-02-24)</small>
 
