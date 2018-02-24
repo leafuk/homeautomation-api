@@ -294,7 +294,7 @@ var stateController = function(req, res){
 
   var exampleResponse = {
     "context": {
-       "properties": []
+       "properties": properties
     },
     "event":{
        "header":{
@@ -310,14 +310,12 @@ var stateController = function(req, res){
     }
   }
 
-  var parsedResponse = JSON.parse(exampleResponse);
-
-  parsedResponse.context.properties = properties;
-
   if(event.directive.endpoint.endpointId === 'milights' ||
       event.directive.endpoint.endpointId === 'everything' ||
       event.directive.endpoint.endpointId === 'ikea-led') {
+
     response = exampleResponse;
+  
   }
 
   console.log(response);
