@@ -265,8 +265,10 @@ var stateController = function(req, res){
     response = exampleResponse;
   }
 
- res.setHeader('Content-Type', 'application/json');
- res.json(response);
+  console.log(response);
+
+  res.setHeader('Content-Type', 'application/json');
+  res.json(response);
 };
 
 var controlEverything = function(event) {
