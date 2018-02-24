@@ -127,7 +127,7 @@ var powerController = function(req, res) {
     if(event.directive.header.name === "TurnOn") {
       led.setColor('#FFFFFF', function() { /* called when color is changed */ });
       store.put('ikea.on', true); 
-      store.put('ikea.color', [0, 0, 1]); 
+      store.put('ikea.color', [0, 0, 1]);
     } else {
       led.turnOff();
       store.put('ikea.on', false); 
@@ -210,7 +210,7 @@ var colorController = function(req, res) {
 
     store.put('ikea.color', [color.hue, color.saturation, color.brightness]);
 
-    response = constructResponse(event, "color", color);    
+    response = constructResponse(event, "color", color);   
   }
 
   res.setHeader('Content-Type', 'application/json');
@@ -271,8 +271,6 @@ var stateController = function(req, res){
         "name":"brightness",
         "value":brightness
       });
-
-      var color = store.get('ikea.color');
       properties.push({
         "namespace":"Alexa.ColorController",
         "name":"color",
