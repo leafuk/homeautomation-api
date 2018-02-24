@@ -206,9 +206,9 @@ var colorController = function(req, res) {
 
     var rgb = hsv(h, s, b);
 
-    led.setColor(color.hue, color.saturation, color.brightness);
+    led.setColor(rgb[0], rgb[1], rgb[2]);
 
-    store.put('ikea.color', rgb);
+    store.put('ikea.color', [color.hue, color.saturation, color.brightness]);
 
     response = constructResponse(event, "color", color);    
   }
