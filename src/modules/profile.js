@@ -3,7 +3,7 @@ var request = require('request');
 var amznProfileURL = 'https://api.amazon.com/user/profile?access_token=';
 
 var Storage = require('node-storage');
-var store = new Storage('/etc/homeautomation/data/state');
+var store = new Storage('/etc/homeautomation/data/state.json');
 
 exports.getProfile = function(accessToken, cb) {
     var url = amznProfileURL + encodeURIComponent(accessToken);

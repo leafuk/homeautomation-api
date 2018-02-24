@@ -4,7 +4,7 @@ var commands = require('node-milight-promise').commands2;
 var helper = require("node-milight-promise").helper;
 
 var Storage = require('node-storage');
-var store = new Storage('/etc/homeautomation/data/state');
+var store = new Storage('/etc/homeautomation/data/milight.json');
 
 var light = new Milight({
         ip: "192.168.1.23",
