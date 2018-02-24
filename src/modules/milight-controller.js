@@ -43,13 +43,14 @@ exports.white = function(zone) {
 
 exports.color = function(colorDecimal, zone) {
   zone = zone || _zone;
+  console.log(colorDecimal);
   store.put('milight.colorDecimal', colorDecimal);
   light.sendCommands(commands.rgbw.hue(colorDecimal));
 }
 
 exports.colorHsv = function(hsv) {
   console.log(hsv);
-  store.put('milight.color', '');
+  store.put('milight.color', hsv);
   light.sendCommands(commands.rgbw.hue(helper.hsvToMilightColor(hsv)));
 }
 
