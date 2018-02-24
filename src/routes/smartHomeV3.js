@@ -219,6 +219,10 @@ var stateController = function(req, res){
   var brightness = milight.getBrightness();
   var color = milight.getColor();
 
+  console.log('power: ' + power);
+  console.log('brightness: ' + brightness);
+  console.log('color: ' + color);
+
   var exampleResponse = {
     "context": {
        "properties":[
