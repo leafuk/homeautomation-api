@@ -215,26 +215,30 @@ var stateController = function(req, res){
   // default to error
   var response = constructError(event);
 
+  var power = milight.getPower() ? 'ON' : 'OFF';
+  var brightness = milight.getBrightness();
+  var color = milight.getColor();
+
   var exampleResponse = {
     "context": {
        "properties":[
           {
              "namespace":"Alexa.PowerController",
              "name":"powerState",
-             "value":"ON"
+             "value":power
           },
           {
              "namespace":"Alexa.BrightnessController",
              "name":"brightness",
-             "value":100
+             "value":brightness
           },
           {
              "namespace":"Alexa.ColorController",
              "name":"color",
              "value":{
-                "hue": 0,
-                "saturation": 0,
-                "brightness": 1
+                "hue": color[0],
+                "saturation": color[1],
+                "brightness": color[2]
             }
           }
        ]

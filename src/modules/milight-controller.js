@@ -26,6 +26,7 @@ exports.on = function(zone) {
   light.sendCommands(commands.rgbw.on(zone), commands.rgbw.whiteMode(zone), commands.rgbw.brightness(100));
 
   store.put('milight.on', true);
+  store.put('milight.color' [0, 0, 1]);
 }
 
 exports.off = function(zone) {
@@ -58,4 +59,16 @@ exports.brightness = function(brightnessLevel, zone) {
   zone = zone || _zone;
   store.put('milight.brightness', brightnessLevel);
   light.sendCommands(commands.rgbw.brightness(brightnessLevel));
+}
+
+exports.getPower = function() {
+  return store.get('milight.on');
+}
+
+exports.getBrightness = function() {
+  return store.get('milight.brightness');
+}
+
+exports.getColor = function() {
+  return store.get('milight.color');
 }
