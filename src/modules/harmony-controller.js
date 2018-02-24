@@ -4,6 +4,9 @@ var exec = require('child_process').exec;
 var config = require('../config.js');
 var format = require('string-format');
 
+var Storage = require('node-storage');
+var store = new Storage('/etc/homeautomation/data/harmony.json');
+
 format.extend(String.prototype);
 
 var changeChannelFormat = './HarmonyHubControl {harmonyIP} issue_device_command {1} {2}';

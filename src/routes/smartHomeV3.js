@@ -2,6 +2,9 @@ var express = require('express');
 var hsv = require("hsv-rgb");
 var fs = require('fs');
 
+var Storage = require('node-storage');
+var store = new Storage('/etc/homeautomation/data/smarthome.json');
+
 var profile = require('../modules/profile');
 var milight = require('../modules/milight-controller.js');
 var harmony = require('../modules/harmony-controller.js');
@@ -123,8 +126,11 @@ var powerController = function(req, res) {
   if(endpoint === 'ikea-led') {
     if(event.directive.header.name === "TurnOn") {
       led.setColor('#FFFFFF', function() { /* called when color is changed */ });
+      store.put('ikea.on', true); 
+      store.put('ikea.color', [0, 0, 1]); 
     } else {
       led.turnOff();
+      store.put('ikea.on', false); 
     }
   }
 
@@ -202,6 +208,8 @@ var colorController = function(req, res) {
 
     led.setColor(rgb[0], rgb[1], rgb[2]);
 
+    store.put('ikea.color', rgb);
+
     response = constructResponse(event, "color", color);    
   }
 
@@ -212,40 +220,81 @@ var colorController = function(req, res) {
 var stateController = function(req, res){
   var event = req.body;
 
+  var properties = [];
+
+  switch (event.directive.endpoint) {
+    case 'everything':
+      var power = store.get('everything.on') ? 'ON' : 'OFF';
+
+      properties.push({
+        "namespace":"Alexa.PowerController",
+        "name":"powerState",
+        "value":power
+      });
+
+      break;
+
+    case 'ikea-led':
+      var power = store.get('ikea.on') ? 'ON' : 'OFF';
+      properties.push({
+        "namespace":"Alexa.PowerController",
+        "name":"powerState",
+        "value":power
+      });
+
+      var color = store.get('ikea.color');
+      properties.push({
+        "namespace":"Alexa.ColorController",
+        "name":"color",
+        "value":{
+          "hue": color[0],
+          "saturation": color[1],
+          "brightness": color[2]
+        }
+      });
+
+      break;
+
+    case 'milights':
+      var power = milight.getPower() ? 'ON' : 'OFF';
+      var brightness = milight.getBrightness();
+      var color = milight.getColor();
+      
+      properties.push({
+        "namespace":"Alexa.PowerController",
+        "name":"powerState",
+        "value":power
+      });
+
+      properties.push({
+        "namespace":"Alexa.BrightnessController",
+        "name":"brightness",
+        "value":brightness
+      });
+
+      var color = store.get('ikea.color');
+      properties.push({
+        "namespace":"Alexa.ColorController",
+        "name":"color",
+        "value":{
+          "hue": color[0],
+          "saturation": color[1],
+          "brightness": color[2]
+        }
+      });
+
+      break;
+
+    default:
+      break;
+  }
+
   // default to error
   var response = constructError(event);
 
-  var power = milight.getPower() ? 'ON' : 'OFF';
-  var brightness = milight.getBrightness();
-  var color = milight.getColor();
-
-  console.log('power: ' + power);
-  console.log('brightness: ' + brightness);
-  console.log('color: ' + color);
-
   var exampleResponse = {
     "context": {
-       "properties":[
-          {
-             "namespace":"Alexa.PowerController",
-             "name":"powerState",
-             "value":power
-          },
-          {
-             "namespace":"Alexa.BrightnessController",
-             "name":"brightness",
-             "value":brightness
-          },
-          {
-             "namespace":"Alexa.ColorController",
-             "name":"color",
-             "value":{
-                "hue": color[0],
-                "saturation": color[1],
-                "brightness": color[2]
-            }
-          }
-       ]
+       "properties":properties
     },
     "event":{
        "header":{
@@ -261,7 +310,9 @@ var stateController = function(req, res){
     }
   }
 
-  if(event.directive.endpoint.endpointId === 'milights'){
+  if(event.directive.endpoint.endpointId === 'milights' ||
+      event.directive.endpoint.endpointId === 'everything' ||
+      event.directive.endpoint.endpointId === 'ikea-led') {
     response = exampleResponse;
   }
 
@@ -277,11 +328,15 @@ var controlEverything = function(event) {
     led.turnOff();
     tplink.off(event.directive.endpoint.cookie.ip, event.directive.endpoint.cookie.port);
     harmony.tvOff();
+
+    store.put('everything.on', true);
   } else {
     milight.on();
     led.setColor('#FFFFFF', function() { /* called when color is changed */ });
     tplink.on(event.directive.endpoint.cookie.ip, event.directive.endpoint.cookie.port);
     harmony.tvOn();
+
+    store.put('everything.on', false);
   }
 }
 
