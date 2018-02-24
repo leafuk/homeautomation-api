@@ -294,7 +294,7 @@ var stateController = function(req, res){
 
   var exampleResponse = {
     "context": {
-       "properties":properties
+       "properties": JSON.stringify(properties)
     },
     "event":{
        "header":{
