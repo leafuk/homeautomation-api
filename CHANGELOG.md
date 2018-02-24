@@ -1,3 +1,10 @@
+<a name="1.0.45"></a>
+## <small>1.0.45 (2018-02-24)</small>
+
+* Fix to properties object ([ec446fe](https://github.com/leafuk/homeautomation-api/commit/ec446fe))
+
+
+
 <a name="1.0.44"></a>
 ## <small>1.0.44 (2018-02-24)</small>
 
