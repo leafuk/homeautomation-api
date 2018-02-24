@@ -12,6 +12,7 @@ exports.getProfile = function(accessToken, cb) {
     var cachedProfile = store.get('profile');
 
     console.log('cached token: ' + cachedToken);
+    console.log('cached profile: ' + cachedProfile);
 
     if(cachedToken === accessToken && cachedProfile != undefined) {
         cb(null, cachedProfile);
@@ -22,7 +23,7 @@ exports.getProfile = function(accessToken, cb) {
 
                 store.put('lastToken', accessToken);
                 store.put('profile', profile);
-                
+
                 cb(null, profile);
             } else {
                 cb(error);
