@@ -1,3 +1,10 @@
+<a name="1.0.37"></a>
+## <small>1.0.37 (2018-02-24)</small>
+
+* Log response of StateController request ([ec91ac2](https://github.com/leafuk/homeautomation-api/commit/ec91ac2))
+
+
+
 <a name="1.0.36"></a>
 ## <small>1.0.36 (2018-02-24)</small>
 
