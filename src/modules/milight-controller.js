@@ -23,41 +23,51 @@ exports.setIp = function(ip) {
 
 exports.on = function(zone) {
   zone = zone || _zone;
-  light.sendCommands(commands.rgbw.on(zone), commands.rgbw.whiteMode(zone), commands.rgbw.brightness(100));
 
-  store.put('milight.on', true);
-  store.put('milight.color' [0, 0, 1]);
+  store.put('milight', {'on': true, 'color': [0, 0, 1] });
+
+  light.sendCommands(commands.rgbw.on(zone), commands.rgbw.whiteMode(zone), commands.rgbw.brightness(100));
 }
 
 exports.off = function(zone) {
   zone = zone || _zone;
-  light.sendCommands(commands.rgbw.off(zone));
 
   store.put('milight.on', false);  
+
+  light.sendCommands(commands.rgbw.off(zone));
 }
 
 exports.white = function(zone) {
   zone = zone || _zone;
+
   store.put('milight.on', true);
+  store.put('milight.color' [0, 0, 1]);
+
   light.sendCommands(commands.rgbw.on(zone), commands.rgbw.whiteMode(zone));
 }
 
 exports.color = function(colorDecimal, zone) {
   zone = zone || _zone;
   console.log(colorDecimal);
+
   store.put('milight.colorDecimal', colorDecimal);
+
   light.sendCommands(commands.rgbw.hue(colorDecimal));
 }
 
 exports.colorHsv = function(hsv) {
   console.log(hsv);
+
   store.put('milight.color', hsv);
+
   light.sendCommands(commands.rgbw.hue(helper.hsvToMilightColor(hsv)));
 }
 
 exports.brightness = function(brightnessLevel, zone) {
   zone = zone || _zone;
+
   store.put('milight.brightness', brightnessLevel);
+
   light.sendCommands(commands.rgbw.brightness(brightnessLevel));
 }
 
