@@ -8,17 +8,21 @@ var store = new Storage('/etc/homeautomation/data/state');
 exports.getProfile = function(accessToken, cb) {
     var url = amznProfileURL + encodeURIComponent(accessToken);
 
-    var cachedProfile = store.get('profile-' + accessToken);
-    console.log('cached profile: ' + JSON.stringify(cachedProfile, null, 4));
+    var cachedToken = store.get('lastToken');
+    var cachedProfile = store.get('profile');
 
-    if (cachedProfile) {
+    console.log('cached token: ' + cachedToken);
+
+    if(cachedToken === accessToken && cachedProfile != undefined) {
         cb(null, cachedProfile);
     } else {
         request.get(url, function(error, response, body) {
             if (response.statusCode == 200) {
                 var profile = JSON.parse(body);
 
-                store.put('profile-' + accessToken, profile);
+                store.put('lastToken', accessToken);
+                store.put('profile', profile);
+                
                 cb(null, profile);
             } else {
                 cb(error);
