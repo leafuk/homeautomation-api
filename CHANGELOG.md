@@ -1,3 +1,10 @@
+<a name="1.0.36"></a>
+## <small>1.0.36 (2018-02-24)</small>
+
+* Add ability to retrieve last logged values ([90f372a](https://github.com/leafuk/homeautomation-api/commit/90f372a))
+
+
+
 <a name="1.0.35"></a>
 ## <small>1.0.35 (2018-02-24)</small>
 
