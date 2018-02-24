@@ -18,7 +18,8 @@
                     "interface": "Alexa.PowerController",
                     "version": "3",
                     "properties": {
-                        
+                        "proactivelyReported": false,
+                        "retrievable": true
                     }
                 }
             ]
@@ -111,7 +112,8 @@
                     "interface": "Alexa.PowerController",
                     "version": "3",
                     "properties": {
-                        
+                        "proactivelyReported": false,
+                        "retrievable": true
                     }
                 },
                 {
@@ -119,11 +121,13 @@
                     "interface": "Alexa.ColorController",
                     "version": "3",
                     "properties": {
-                      "supported": [
-                        {
-                          "name": "color"
-                        }
-                      ]
+                        "supported": [
+                            {
+                            "name": "color"
+                            }
+                        ],
+                        "proactivelyReported": false,
+                        "retrievable": true
                     }
                 }
             ]
