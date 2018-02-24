@@ -1,3 +1,10 @@
+<a name="1.0.39"></a>
+## <small>1.0.39 (2018-02-24)</small>
+
+* milight.on stores color value correctly ([e8d3a46](https://github.com/leafuk/homeautomation-api/commit/e8d3a46))
+
+
+
 <a name="1.0.38"></a>
 ## <small>1.0.38 (2018-02-24)</small>
 
