@@ -37,20 +37,24 @@ exports.off = function(zone) {
 
 exports.white = function(zone) {
   zone = zone || _zone;
+  store.put('milight.on', true);
   light.sendCommands(commands.rgbw.on(zone), commands.rgbw.whiteMode(zone));
 }
 
 exports.color = function(colorDecimal, zone) {
   zone = zone || _zone;
+  store.put('milight.colorDecimal', colorDecimal);
   light.sendCommands(commands.rgbw.hue(colorDecimal));
 }
 
 exports.colorHsv = function(hsv) {
   console.log(hsv);
+  store.put('milight.color', '');
   light.sendCommands(commands.rgbw.hue(helper.hsvToMilightColor(hsv)));
 }
 
 exports.brightness = function(brightnessLevel, zone) {
   zone = zone || _zone;
+  store.put('milight.brightness', brightnessLevel);
   light.sendCommands(commands.rgbw.brightness(brightnessLevel));
 }
