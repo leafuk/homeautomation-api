@@ -1,3 +1,10 @@
+<a name="1.0.31"></a>
+## <small>1.0.31 (2018-02-24)</small>
+
+* Store milight values when set ([b738d4a](https://github.com/leafuk/homeautomation-api/commit/b738d4a))
+
+
+
 <a name="1.0.30"></a>
 ## <small>1.0.30 (2018-02-24)</small>
 
