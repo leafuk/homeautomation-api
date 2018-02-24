@@ -1,3 +1,10 @@
+<a name="1.0.40"></a>
+## <small>1.0.40 (2018-02-24)</small>
+
+* Store state for other devices. Report back the state when requested ([a12bb17](https://github.com/leafuk/homeautomation-api/commit/a12bb17))
+
+
+
 <a name="1.0.39"></a>
 ## <small>1.0.39 (2018-02-24)</small>
 
