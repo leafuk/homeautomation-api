@@ -222,7 +222,7 @@ var stateController = function(req, res){
 
   var properties = [];
 
-  switch (event.directive.endpoint) {
+  switch (event.directive.endpoint.endpointId) {
     case 'everything':
       var power = store.get('everything.on') ? 'ON' : 'OFF';
 
