@@ -1,3 +1,10 @@
+<a name="1.0.48"></a>
+## <small>1.0.48 (2018-02-24)</small>
+
+* Store ikea color values properly ([22fe113](https://github.com/leafuk/homeautomation-api/commit/22fe113))
+
+
+
 <a name="1.0.47"></a>
 ## <small>1.0.47 (2018-02-24)</small>
 
