@@ -1,3 +1,10 @@
+<a name="1.0.42"></a>
+## <small>1.0.42 (2018-02-24)</small>
+
+* Update devices ([650b2e5](https://github.com/leafuk/homeautomation-api/commit/650b2e5))
+
+
+
 <a name="1.0.41"></a>
 ## <small>1.0.41 (2018-02-24)</small>
 
