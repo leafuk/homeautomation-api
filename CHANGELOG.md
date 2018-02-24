@@ -1,3 +1,10 @@
+<a name="1.0.38"></a>
+## <small>1.0.38 (2018-02-24)</small>
+
+* split the data store values for milights.on function ([80f9d6f](https://github.com/leafuk/homeautomation-api/commit/80f9d6f))
+
+
+
 <a name="1.0.37"></a>
 ## <small>1.0.37 (2018-02-24)</small>
 
