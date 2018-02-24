@@ -318,7 +318,7 @@ var stateController = function(req, res){
   
   }
 
-  console.log(response);
+  console.log(JSON.stringify(response, null, 4));
 
   res.setHeader('Content-Type', 'application/json');
   res.json(response);
