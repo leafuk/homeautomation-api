@@ -1,3 +1,10 @@
+<a name="1.0.50"></a>
+## <small>1.0.50 (2018-03-01)</small>
+
+* Only switch heater fan on, don't oscillate' ([2713dad](https://github.com/leafuk/homeautomation-api/commit/2713dad))
+
+
+
 <a name="1.0.49"></a>
 ## <small>1.0.49 (2018-02-24)</small>
 
