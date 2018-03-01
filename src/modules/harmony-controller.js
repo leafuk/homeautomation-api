@@ -92,8 +92,8 @@ exports.tvOff = function() {
 
 exports.heatingOn = function(ip, deviceId) {
   exec(changeChannelFormat.format({ harmonyIP: ip }, deviceId, 'PowerToggle')  , function(error, stdout, stderr) {
-    exec(changeChannelFormat.format({ harmonyIP: ip }, deviceId, 'Oscillate')  , function(error, stdout, stderr) {
-    });
+    // exec(changeChannelFormat.format({ harmonyIP: ip }, deviceId, 'Oscillate')  , function(error, stdout, stderr) {
+    // });
   });
 }
 
