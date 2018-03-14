@@ -1,5 +1,8 @@
 const fetch = require('node-fetch');
 
+var Storage = require('node-storage');
+var store = new Storage('/etc/homeautomation/data/nest.json');
+
 function listCameras(token, callback) {
     let options = {
         method: 'GET',
