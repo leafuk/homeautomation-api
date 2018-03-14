@@ -52,6 +52,7 @@ function setCamera(token, onOff, deviceIds, callback) {
     deviceIds.forEach(id => {
         fetch('https://developer-api.nest.com/devices/cameras/' + id, options)
         .then(result => {
+            console.log(result);
             store.put('camera.on', onOff);
             
             if (callback) {

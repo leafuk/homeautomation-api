@@ -69,10 +69,12 @@ router.post('/alexa', function(req, res) {
       var token = event.directive.payload.scope ? event.directive.payload.scope.token : event.directive.endpoint.scope.token;
       console.log(token);
       
-      nest.listCameras(token, function(camIds) {
-        console.log(camIds);
+      nest.listCameras(token, function(cams) {
+        console.log(cams);
+
+        let ids = cams.map(cam => cam.device_id);
   
-        nest.setCamera(token, event.directive.header.name === "TurnOn", camIds);
+        nest.setCamera(token, event.directive.header.name === "TurnOn", ids);
       });
     }
     
