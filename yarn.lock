@@ -635,6 +635,10 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+node-fetch@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.1.1.tgz#369ca70b82f50c86496104a6c776d274f4e4a2d4"
+
 node-milight-promise@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/node-milight-promise/-/node-milight-promise-0.3.1.tgz#2f7345a3964e08cb9480147cab1ee67ae51e59f1"

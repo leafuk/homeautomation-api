@@ -9,6 +9,7 @@ var profile = require('../modules/profile');
 var milight = require('../modules/milight-controller.js');
 var harmony = require('../modules/harmony-controller.js');
 var tplink = require('../modules/hs100-controller');
+var nest = require('../modules/nest-cam');
 
 try {
   var blinkstick = require('blinkstick');
@@ -136,6 +137,17 @@ var powerController = function(req, res) {
 
   if(endpoint === 'heater') {
     harmony.heatingOn(event.directive.endpoint.cookie.harmonyIP, event.directive.endpoint.cookie.harmonyId);
+  }
+
+  if(endpoint == 'camera') {
+    var token = event.directive.payload.scope ? event.directive.payload.scope.token : event.directive.endpoint.scope.token;
+    console.log(token);
+    
+    nest.listCameras(token, function(camIds) {
+      console.log(camIds);
+
+      nest.setCamera(token, event.directive.header.name === "TurnOn", camIds);
+    });
   }
   
   var response = constructResponse(event, "powerState", event.directive.header.name === "TurnOff" ? "OFF": "ON");

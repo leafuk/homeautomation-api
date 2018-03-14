@@ -19,6 +19,7 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "hsv-rgb": "^1.0.0",
+    "node-fetch": "^2.1.1",
     "node-milight-promise": "^0.3.1",
     "node-storage": "0.0.7",
     "request": "^2.83.0",

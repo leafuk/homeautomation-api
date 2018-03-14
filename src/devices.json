@@ -131,6 +131,26 @@
                     }
                 }
             ]
+        },
+        {
+            "endpointId": "camera",
+            "friendlyName": "Camera",
+            "description": "Camera",
+            "manufacturerName": "Nest",
+            "displayCategories": [
+                "SWITCH"
+            ],
+            "capabilities": [
+                {
+                    "type": "AlexaInterface",
+                    "interface": "Alexa.PowerController",
+                    "version": "3",
+                    "properties": {
+                        "proactivelyReported": false,
+                        "retrievable": true
+                    }
+                }
+            ]
         }
     ]
 }
