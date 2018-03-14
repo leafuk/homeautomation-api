@@ -29,6 +29,9 @@ app.use(bodyParser.json());
 var smartHomeApi = require('./routes/smartHomeV3');
 app.use('/alexa-smart-home', smartHomeApi);
 
+var nestApi = require('./routes/nestController');
+app.use('/alexa-nest', nestApi);
+
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
