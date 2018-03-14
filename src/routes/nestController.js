@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require('fs');
 var nest = require('../modules/nest-cam');
 
 var router = express.Router();
