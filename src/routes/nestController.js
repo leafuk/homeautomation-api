@@ -2,6 +2,9 @@ var express = require('express');
 var fs = require('fs');
 var nest = require('../modules/nest-cam');
 
+var Storage = require('node-storage');
+var store = new Storage('/etc/homeautomation/data/nest.json');
+
 var router = express.Router();
 
 router.post('/alexa', function(req, res) {
