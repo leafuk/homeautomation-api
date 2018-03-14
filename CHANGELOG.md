@@ -1,3 +1,10 @@
+<a name="1.0.51"></a>
+## <small>1.0.51 (2018-03-14)</small>
+
+* Add support for controlling nest cam ([0835ce7](https://github.com/leafuk/homeautomation-api/commit/0835ce7))
+
+
+
 <a name="1.0.50"></a>
 ## <small>1.0.50 (2018-03-01)</small>
 
