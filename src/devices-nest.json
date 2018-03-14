@@ -2,8 +2,8 @@
     "endpoints": [
         {
             "endpointId": "camera",
-            "friendlyName": "Camera",
-            "description": "Camera",
+            "friendlyName": "Living Room Camera",
+            "description": "Living Room Camera Nest Cam",
             "manufacturerName": "Nest",
             "displayCategories": [
                 "SWITCH"
