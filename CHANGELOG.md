@@ -1,3 +1,10 @@
+<a name="1.0.52"></a>
+## <small>1.0.52 (2018-03-14)</small>
+
+* Update to Nest control. Split out the devices and controllers to separate entities ([990f36c](https://github.com/leafuk/homeautomation-api/commit/990f36c))
+
+
+
 <a name="1.0.51"></a>
 ## <small>1.0.51 (2018-03-14)</small>
 
