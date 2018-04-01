@@ -90,11 +90,22 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+bindings@~1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.3.0.tgz#b346f6ecf6a95f5a815c5839fc7cdb22502f1ed7"
+
 blinkstick@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/blinkstick/-/blinkstick-1.1.3.tgz#166847fa3d492171e7769e8e3ef77e79541d2ae1"
   dependencies:
     usb "1.1.1"
+
+blinkt@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/blinkt/-/blinkt-0.0.2.tgz#8a19191fe2b60fffa800e917a40e16f77f39cca9"
+  dependencies:
+    exit-hook "^1.1.1"
+    onoff "^1.1.7"
 
 block-stream@*:
   version "0.0.9"
@@ -262,6 +273,13 @@ encodeurl@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
 
+epoll@~1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/epoll/-/epoll-1.0.2.tgz#d7d913e3fbdaf4315bd029ceecf9dc6487713b57"
+  dependencies:
+    bindings "~1.3.0"
+    nan "~2.8.0"
+
 escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -269,6 +287,10 @@ escape-html@~1.0.3:
 etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
+
+exit-hook@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/exit-hook/-/exit-hook-1.1.1.tgz#f05ca233b48c05d54fff07765df8507e95c02ff8"
 
 express@^4.14.0:
   version "4.16.2"
@@ -631,6 +653,10 @@ nan@^2.1.0:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.9.2.tgz#f564d75f5f8f36a6d9456cca7a6c4fe488ab7866"
 
+nan@~2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.8.0.tgz#ed715f3fe9de02b57a5e6252d90a96675e1f085a"
+
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
@@ -708,6 +734,12 @@ once@^1.3.0, once@^1.3.3:
   resolved "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
   dependencies:
     wrappy "1"
+
+onoff@^1.1.7:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/onoff/-/onoff-1.2.0.tgz#f642d4e040cd57f63cac5bcee226b573a5795d12"
+  dependencies:
+    epoll "~1.0.2"
 
 os-homedir@^1.0.0:
   version "1.0.2"

@@ -2,7 +2,7 @@
   "name": "homeautomation-api",
   "description": "Node-based API for handling Alexa Smart Home requests.",
   "homepage": "https://github.com/leafuk/homeautomation-api#readme",
-  "version": "1.0.57",
+  "version": "1.0.61",
   "main": "src/app.js",
   "author": {
     "name": "Lea Foreman"
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "blinkstick": "^1.1.3",
+    "blinkt": "^0.0.2",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "hsv-rgb": "^1.0.0",
