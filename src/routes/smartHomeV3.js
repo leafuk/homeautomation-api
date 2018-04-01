@@ -32,10 +32,10 @@ try {
   };
 
   var blinkt = {
-    NUM_PIXELS = 0,
-    clear = function(){},
-    show = function(){},
-    setPixel = function(pixel,red,green,blue){}
+    NUM_PIXELS: 0,
+    clear : function(){},
+    show : function(){},
+    setPixel : function(pixel,red,green,blue){}
   };
 }
 
