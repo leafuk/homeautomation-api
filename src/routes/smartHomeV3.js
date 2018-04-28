@@ -13,6 +13,22 @@ var tplink = require('../modules/hs100-controller');
 var nest = require('../modules/nest-cam');
 var blinkt = require('../modules/blinkt-controller');
 
+try {
+  var blinkstick = require('blinkstick');
+  var led = blinkstick.findFirst();
+  if(led != undefined) {
+      led.setMode(1);
+  }
+} catch (error) {
+  var led = {
+    turnOff: function() {
+    },
+
+    setColor: function(color) {
+    }
+  };
+}
+
 var router = express.Router();
 
 router.use(function(req, res, next) {
