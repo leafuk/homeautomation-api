@@ -32,7 +32,7 @@ let REDS = [0, 0, 0, 0, 0, 16, 64, 255, 64, 16, 0, 0, 0, 0, 0, 0];
 function showLarson() {
     let delta =( new Date().getTime() - startTime);
 
-    let offset = parseInt(Math.abs((delta % REDS.length) = blinkt.NUM_PIXELS));
+    let offset = parseInt(Math.abs((delta % REDS.length) - blinkt.NUM_PIXELS));
 
     for (let i = 0; i < blinkt.NUM_PIXELS; i++) {
         blinkt.setPixel(i, REDS[offset + 1], 0, 0);
