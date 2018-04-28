@@ -1,3 +1,4 @@
+// var exports = module.exports = {};
 
 try {
     var blinkt = require('blinkt');
@@ -29,7 +30,7 @@ try {
 let startTime = new Date().getTime();
 let REDS = [0, 0, 0, 0, 0, 16, 64, 255, 64, 16, 0, 0, 0, 0, 0, 0];
 
-function showLarson() {
+let showLarson = function() {
     let delta =( new Date().getTime() - startTime);
 
     let offset = parseInt(Math.abs((delta % REDS.length) - blinkt.NUM_PIXELS));
@@ -43,13 +44,13 @@ function showLarson() {
 
 let larsonTimer = {};
 
-export function loading() {
+exports.loading = function() {
     larsonTimer = setInterval(function() {
         showLarson();
     }, 5);
 }
 
-export function stop() {
+exports.stop = function() {
     clearInterval(larsonTimer);
     blinkt.clear();
     blinkt.show();
