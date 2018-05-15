@@ -33,7 +33,7 @@ var nestApi = require('./routes/nestController');
 app.use('/alexa-nest', nestApi);
 
 app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/views/index.html');
+  res.sendStatus(404);
 });
 
 app.get('/version', function(req, res){
