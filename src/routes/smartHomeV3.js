@@ -38,24 +38,24 @@ router.use(function(req, res, next) {
 })
 
 // a middleware function with no mount path. This code is executed for every request to the router
-router.use(function (req, res, next) {
-  console.log(JSON.stringify(req.body, null, 4));
+// router.use(function (req, res, next) {
+//   console.log(JSON.stringify(req.body, null, 4));
 
-  var event = req.body;
+//   var event = req.body;
 
-  var token = event.directive.payload.scope ? event.directive.payload.scope.token : event.directive.endpoint.scope.token;
+//   var token = event.directive.payload.scope ? event.directive.payload.scope.token : event.directive.endpoint.scope.token;
 
-  profile.getProfile(token, function(error, user) {
-    if(error) { console.log(error); }
-    // Only the authorised user can call this
-    if (user === null || user.email !== process.env.authorised_email) {
-      res.status(403).send('Not allowed!');
-    }
+//   profile.getProfile(token, function(error, user) {
+//     if(error) { console.log(error); }
+//     // Only the authorised user can call this
+//     if (user === null || user.email !== process.env.authorised_email) {
+//       res.status(403).send('Not allowed!');
+//     }
 
-    res.user = user;
-    next();  
-  });
-});
+//     res.user = user;
+//     next();  
+//   });
+// });
 
 router.post('/alexa', function(req, res){
   var event = req.body;
