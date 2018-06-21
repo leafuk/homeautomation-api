@@ -32,6 +32,9 @@ app.use('/alexa-smart-home', smartHomeApi);
 var nestApi = require('./routes/nestController');
 app.use('/alexa-nest', nestApi);
 
+var pollenCountFeed = require('./routes/pollenCountFeed');
+app.use('/flash-briefing', pollenCountFeed);
+
 app.get('/', function(req, res) {
   res.sendStatus(404);
 });
