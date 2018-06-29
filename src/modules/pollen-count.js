@@ -20,6 +20,7 @@ exports.getPollenCount = function(cb) {
             json: true
         },
         function (error, response, body) {
+            console.log(body);
             if (!error && response.statusCode === 200) {
                 body.forecast.forEach(function (item) {
                     if (item.date.contains(today)) {
@@ -27,6 +28,11 @@ exports.getPollenCount = function(cb) {
                         cb(null, item.pollen_count);
                     }
                 });
+            }
+            else {
+                console.log('Something went wrong...');
+                console.log('Response code: ' + response.statusCode);
+                cb(new Error('Pollen count failed to return 200'));
             }
             if (error) {
                 console.log('Something went wrong...');
