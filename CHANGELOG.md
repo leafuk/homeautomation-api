@@ -1,3 +1,10 @@
+<a name="1.2.3"></a>
+## <small>1.2.3 (2018-06-29)</small>
+
+* Added catch for pollen API fail ([40648d9](https://github.com/leafuk/homeautomation-api/commit/40648d9))
+
+
+
 <a name="1.2.2"></a>
 ## <small>1.2.2 (2018-06-21)</small>
 
